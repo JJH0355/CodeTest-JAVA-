@@ -2,17 +2,12 @@ package codeTest02;
 
 import java.util.Scanner;
 
-public class Test01 {	
-	public static void main(String[] args) {
-	
+public class Test01 {
+	public static int solution(int order) {
 		// 결과 값을 담을 변수 생성
 		int result = 0;
 		
-		// 정수 값을 입력 받음
 		// 비교를 위해 문자열로 변경
-		Scanner sc = new Scanner(System.in);
-		
-		int order = sc.nextInt();
 		String orderStr = order+"";
 		
 		// 받은 입력 값을 한 글자씩 가져와서 3, 6, 9에 비교
@@ -27,7 +22,14 @@ public class Test01 {
 			}
 		}
 		
-		// 결과 출력
-		System.out.println(result);
+		return result;
+	}
+
+	public static void main(String[] args) {
+		int order = 3;
+		int order2 = 29423;
+		
+		System.out.println(solution(order));
+		System.out.println(solution(order2));
 	}
 }
